@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-heading: normal bold 33px/1.3 "Rajdhani", sans-serif;
+  --font-sub-heading: normal bold 24px/1.3 "Rajdhani", sans-serif;
+  --font-nav: normal 18px/1.3 "Rajdhani", sans-serif;
+  --font-body: normal bold 18px/1.3 "Rajdhani", sans-serif;
+
+  --clr-green-main: #4d9308;
+  --clr-black: #000;
+  --clr-white: #fff;
+
+  --box-glow: radial-gradient(rgba(0, 60, 91, 1), rgba(0, 1, 32, 1));
+  --box-glow-hover: radial-gradient(rgb(34, 86, 113) 20%, rgba(0, 1, 32, 1));
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
