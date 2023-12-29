@@ -11,7 +11,6 @@ export default function Hero() {
         src={bg}
         alt="Kemistry Night Club hero background"
         className={classes.background}
-        fill
         priority
       />
       <Image

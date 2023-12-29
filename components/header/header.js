@@ -12,7 +12,7 @@ import mobileLogo from "@/assets/Title.png";
 import { useState } from "react";
 
 export default function Header() {
-  const [slideIn, setSlideIn] = useState(true);
+  const [slideIn, setSlideIn] = useState(false);
 
   const slideInMenuHandler = () => {
     setSlideIn((prevState) => !prevState);

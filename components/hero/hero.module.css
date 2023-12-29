@@ -1,0 +1,24 @@
+.hero-section {
+  position: relative;
+  height: 60vmin;
+  z-index: -1;
+}
+
+.hero-section .background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-section .title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 70vw;
+  height: auto;
+}
