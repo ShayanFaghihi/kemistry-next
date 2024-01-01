@@ -1,11 +1,30 @@
 import { getEvents } from "@/lib/events";
 import Image from "next/image";
 
+import EventsSlider from "@/components/events/events-slider";
+
 import classes from "./page.module.css";
 import Hero from "@/components/hero/hero";
+import Container from "@/components/UI/container";
 
 export default async function HomePage() {
   const events = await getEvents();
 
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <EventsSlider events={events} />
+      <section className={classes["about-section"]}>
+        <Container>
+          <h2>About Us</h2>
+          <p>
+            WE ARE A NEW MUSIC VENUE IN DOWNTOWN FORT LAUDERDALE PROVIDING
+            ELEVATED EXPERIENCES WITH HIGH GRADE PRODUCTION, WORLD CLASS
+            HOSPITALITY, AND A GREAT SENSE OF COMMUNITY. IN ADDITION WE HAVE
+            AMAZING FOOD AND A COCKTAIL MENU LIKE NO OTHER.
+          </p>
+        </Container>
+      </section>
+    </>
+  );
 }

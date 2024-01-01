@@ -1,0 +1,21 @@
+.event {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-image {
+  margin-bottom: 1rem;
+}
+
+.event-name {
+  color: var(--clr-green-main);
+  font: var(--font-sub-heading);
+  text-align: center;
+}
+
+.event-date {
+  color: #fff;
+}

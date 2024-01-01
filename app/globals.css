@@ -7,10 +7,10 @@
 }
 
 :root {
-  --font-heading: normal bold 33px/1.3 "Rajdhani", sans-serif;
-  --font-sub-heading: normal bold 24px/1.3 "Rajdhani", sans-serif;
-  --font-nav: normal 18px/1.3 "Rajdhani", sans-serif;
-  --font-body: normal bold 18px/1.3 "Rajdhani", sans-serif;
+  --font-heading: normal bold 33px/1.4 "Rajdhani", sans-serif;
+  --font-sub-heading: normal 300 18px/1.4 "Rajdhani", sans-serif;
+  --font-nav: normal 18px/1.4 "Rajdhani", sans-serif;
+  --font-body: normal 300 13px/1.5 "Rajdhani", sans-serif;
 
   --clr-green-main: #4d9308;
   --clr-black: #000;
@@ -24,9 +24,20 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: var(--clr-black);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font: var(--font-sub-heading);
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: var(--clr-green-main);
 }
