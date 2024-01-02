@@ -1,0 +1,20 @@
+.gallery-section .container {
+  border: 1px solid var(--clr-green-main);
+  background-image: var(--box-glow);
+  padding: 2rem 2rem;
+  position: relative;
+}
+.gallery-section h2 {
+  color: var(--clr-white);
+  font: var(--font-sub-heading);
+  display: flex;
+  margin-bottom: 1rem;
+}
+.gallery-section .devider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--clr-green-main);
+  position: absolute;
+  content: "";
+  left: 0;
+}

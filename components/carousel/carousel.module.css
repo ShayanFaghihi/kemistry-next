@@ -1,23 +1,14 @@
-.events-section {
-  padding-block: 2rem;
-}
-
-.events-container {
+.carousel {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
   flex: none;
-  overflow: auto;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-align: center;
   scroll-snap-type: x mandatory;
   scroll-snap-stop: normal;
+  padding-top: 20px;
   padding-bottom: 40px;
-}
-
-.event-box {
-  width: 100%;
-  height: auto;
-  scroll-snap-align: center;
 }

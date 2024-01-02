@@ -1,11 +1,10 @@
 import { getEvents } from "@/lib/events";
-import Image from "next/image";
-
-import EventsSlider from "@/components/events/events-slider";
-
 import classes from "./page.module.css";
+
 import Hero from "@/components/hero/hero";
 import Container from "@/components/UI/container";
+import EventsSlider from "@/components/events/events-slider";
+import Gallery from "@/components/gallery/gallery";
 
 export default async function HomePage() {
   const events = await getEvents();
@@ -25,6 +24,7 @@ export default async function HomePage() {
           </p>
         </Container>
       </section>
+      <Gallery />
     </>
   );
 }

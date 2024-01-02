@@ -48,6 +48,7 @@
   padding: 5rem 0;
   opacity: 0;
   transition: all 0.7s ease-in-out;
+  z-index: 10;
 }
 
 .active {

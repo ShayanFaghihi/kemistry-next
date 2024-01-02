@@ -22,7 +22,13 @@ export default function Header() {
     <header className={classes.header}>
       <Container className={classes.container}>
         <Link href="/" className={classes.logo}>
-          <Image src={Logo} width="80" height="50" priority />
+          <Image
+            alt="Kemistry Night Club Logo"
+            src={Logo}
+            width="80"
+            height="50"
+            priority
+          />
         </Link>
 
         <div className={classes["mobile-menu"]}>
@@ -40,7 +46,13 @@ export default function Header() {
             }
           >
             <Link href="/" className={classes.logo}>
-              <Image src={mobileLogo} width="80" height="50" priority />
+              <Image
+                alt="Kemistry Night Club 3D Logo"
+                src={mobileLogo}
+                width="80"
+                height="50"
+                priority
+              />
             </Link>
             <div className={classes.devider}></div>
 
