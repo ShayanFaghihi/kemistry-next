@@ -1,0 +1,36 @@
+.footer-section {
+  padding: 2rem 0;
+}
+
+.footer-section .logo {
+  text-align: center;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-social {
+  text-align: center;
+  color: var(--clr-white);
+  margin-top: 2rem;
+}
+
+.footer-social a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.footer-social ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 1rem 0;
+}
+
+.footer-social ul li a {
+  font-size: 20px;
+}

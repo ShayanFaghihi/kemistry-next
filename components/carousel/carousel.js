@@ -27,13 +27,7 @@ export default function Carousel({ imageArr }) {
   return (
     <div className={classes.carousel} ref={carouselRef}>
       {imageArr.map((img) => (
-        <Image
-          key={img.src}
-          alt={img.alt}
-          src={img.src}
-          width={400}
-          height={300}
-        />
+        <Image key={img.src} alt={img.alt} src={img.src} />
       ))}
     </div>
   );
