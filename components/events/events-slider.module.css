@@ -1,19 +1,5 @@
 .events-section {
-  padding-block: 2rem;
-}
-
-.events-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  flex: none;
-  overflow: auto;
-  scroll-behavior: smooth;
-  scroll-snap-align: center;
-  scroll-snap-type: x mandatory;
-  scroll-snap-stop: normal;
-  padding-bottom: 40px;
+  padding-block: 4rem 2rem;
 }
 
 .event-box {

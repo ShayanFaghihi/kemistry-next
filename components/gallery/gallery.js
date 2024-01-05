@@ -1,4 +1,9 @@
+"use client";
 import Container from "../UI/container";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { gallerySettings as settings } from "@/lib/carouselSettings";
 
 import classes from "./gallery.module.css";
 
@@ -9,7 +14,7 @@ import image4 from "@/assets/gallery/gallery-4.jpeg";
 import image5 from "@/assets/gallery/gallery-5.jpeg";
 import image6 from "@/assets/gallery/gallery-6.jpeg";
 import image7 from "@/assets/gallery/gallery-7.jpeg";
-import Carousel from "../carousel/carousel";
+import Image from "next/image";
 
 const galleryArr = [
   { src: image1, alt: "Image Gallery" },
@@ -27,7 +32,11 @@ export default function Gallery() {
       <Container className={classes.container}>
         <h2>Weekly Gallery</h2>
         <span className={classes.devider}></span>
-        <Carousel imageArr={galleryArr} />
+        <Slider {...settings} className={classes.slider}>
+          {galleryArr.map((img) => (
+            <Image key={img.src} src={img.src} alt={img.alt} />
+          ))}
+        </Slider>
       </Container>
     </section>
   );

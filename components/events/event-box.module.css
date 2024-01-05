@@ -8,6 +8,7 @@
 
 .event-image {
   margin-bottom: 1rem;
+  object-fit: cover;
 }
 
 .event-name {

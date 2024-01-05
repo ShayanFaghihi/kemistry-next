@@ -18,3 +18,13 @@
   content: "";
   left: 0;
 }
+
+.gallery-section .slider {
+  margin-top: 3rem;
+}
+
+.gallery-section .slider img {
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+}

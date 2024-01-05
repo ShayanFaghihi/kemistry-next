@@ -15,7 +15,7 @@ export default async function HomePage() {
       <Hero />
       <EventsSlider events={events} />
       <section className={classes["about-section"]}>
-        <Container>
+        <Container className={classes.container}>
           <h2>About Us</h2>
           <p>
             WE ARE A NEW MUSIC VENUE IN DOWNTOWN FORT LAUDERDALE PROVIDING

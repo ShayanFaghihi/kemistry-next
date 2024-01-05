@@ -21,3 +21,9 @@
   width: 70vw;
   height: auto;
 }
+
+@media (width > 1000px) {
+  .hero-section {
+    height: 70vh;
+  }
+}

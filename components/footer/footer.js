@@ -15,9 +15,23 @@ import logoWhite from "@/assets/whiteLogo.png";
 export default function Footer() {
   return (
     <footer className={classes["footer-section"]}>
-      <Container>
+      <Container className={classes.container}>
         <div className={classes.logo}>
           <Image src={logoWhite} alt="Kemistry Night Club white logo" />
+        </div>
+        <div className={classes["footer-contact"]}>
+          <h2>Stay Connected</h2>
+          <p>Get all the latest content delivered right to your inbox</p>
+          <form>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter a valid email address"
+              required
+            />
+            <button type="submit">Sign Up</button>
+          </form>
         </div>
         <div className={classes["footer-social"]}>
           <a href="mailto:info@kemistrynightclub.com">
