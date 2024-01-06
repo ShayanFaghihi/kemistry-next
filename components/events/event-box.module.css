@@ -6,9 +6,55 @@
   align-items: center;
 }
 
+.event-image-box {
+  position: relative;
+}
+
 .event-image {
   margin-bottom: 1rem;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.event-action {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0;
+  z-index: -1;
+}
+
+.event-action a {
+  color: #fff;
+  padding: 10px 1rem;
+  display: inline-block;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid var(--clr-white);
+  transition: all 0.3s;
+}
+
+.event-action a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.event:hover .event-image {
+  opacity: 0.3;
+}
+
+.event:hover .event-action {
+  bottom: 50%;
+  opacity: 1;
+  z-index: 1;
 }
 
 .event-name {
