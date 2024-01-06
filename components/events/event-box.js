@@ -27,7 +27,7 @@ export default function EventBox({ eventData }) {
           </Link>
         </div>
       </div>
-      <h2 className={classes["event-name"]}>{name}</h2>
+      <h3 className={classes["event-name"]}>{name}</h3>
       <p className={classes["event-date"]}>{formatedDate}</p>
     </div>
   );

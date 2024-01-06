@@ -59,7 +59,7 @@
 
 .event-name {
   color: var(--clr-green-main);
-  font: var(--font-sub-heading);
+  font: var(--font-title);
   text-align: center;
 }
 

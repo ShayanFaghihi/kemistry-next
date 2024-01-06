@@ -2,6 +2,11 @@
   padding-block: 4rem 2rem;
 }
 
+.events-section h2 {
+  font: var(--font-sub-heading);
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .event-box {
   width: 100%;
   height: auto;

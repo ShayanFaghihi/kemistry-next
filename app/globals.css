@@ -9,6 +9,7 @@
 :root {
   --font-heading: normal bold 33px/1.4 "Rajdhani", sans-serif;
   --font-sub-heading: normal 300 18px/1.4 "Rajdhani", sans-serif;
+  --font-title: normal 300 14px/1.4 "Rajdhani", sans-serif;
   --font-nav: normal 18px/1.4 "Rajdhani", sans-serif;
   --font-body: normal 300 13px/1.5 "Rajdhani", sans-serif;
 
@@ -23,6 +24,8 @@
 @media (min-width: 1000px) {
   :root {
     --font-body: normal 300 18px/1.5 "Rajdhani", sans-serif;
+    --font-sub-heading: normal 300 22px/1.4 "Rajdhani", sans-serif;
+    --font-title: normal 300 16px/1.4 "Rajdhani", sans-serif;
   }
 }
 
@@ -58,4 +61,5 @@ h4 {
 
 .slick-dots li button:before {
   color: #fff !important;
+  margin-block: 2rem;
 }

@@ -12,6 +12,7 @@ export default function EventsSlider({ events }) {
   return (
     <section className={classes["events-section"]}>
       <Container>
+        <h2>Upcoming Events</h2>
         <Slider {...settings}>
           {events?.map((event) => (
             <EventBox
