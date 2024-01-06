@@ -14,7 +14,7 @@ export default async function HomePage() {
     <>
       <Hero />
       <EventsSlider events={events} />
-      {events.map((event) => (
+      {events?.map((event) => (
         <h2 key={event.id}>{event.name}</h2>
       ))}
       <section className={classes["about-section"]}>
