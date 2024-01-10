@@ -1,9 +1,10 @@
 import { Rajdhani } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 export const metadata = {
-  title: "Home | Kemistry Night Club",
+  title: "Home - Kemistry Night Club",
   description:
     "Kemistry a new music venue in downtown Fort Lauderdale providing elevated experiences with best production, world class hospitality, and great sense of community",
 };
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

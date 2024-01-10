@@ -5,7 +5,6 @@ import Hero from "@/components/hero/hero";
 import Container from "@/components/UI/container";
 import EventsSlider from "@/components/events/events-slider";
 import Gallery from "@/components/gallery/gallery";
-import Footer from "@/components/footer/footer";
 
 export default async function HomePage() {
   const events = await getEvents();
@@ -26,7 +25,6 @@ export default async function HomePage() {
         </Container>
       </section>
       <Gallery />
-      <Footer />
     </>
   );
 }

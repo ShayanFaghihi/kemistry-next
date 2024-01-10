@@ -2,6 +2,7 @@
   width: 100%;
   padding-block: 1rem;
   background-color: var(--clr-black);
+  border-bottom: 1px solid var(--clr-white);
 }
 
 .header .container {
