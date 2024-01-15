@@ -46,7 +46,7 @@ export default function EventsGrid() {
 
   return (
     <>
-      <h2 className={classes.heading}>Kemistry Upcoming Events</h2>
+      <h1 className={classes.heading}>Kemistry Upcoming Events</h1>
       <div id="dice-event-list-widget" className={classes["events-widget"]}>
         <LoadingIndicator />
       </div>

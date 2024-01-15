@@ -3,8 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAlignRight } from "@fortawesome/free-solid-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faAlignRight, faTimes } from "@fortawesome/free-solid-svg-icons";
 import classes from "./header.module.css";
 import Container from "../UI/container";
 import Logo from "@/assets/Logo-Green.png";

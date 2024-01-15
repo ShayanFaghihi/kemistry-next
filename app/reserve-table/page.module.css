@@ -1,0 +1,75 @@
+.map-section h1 {
+  text-align: center;
+  padding-block: 2rem;
+}
+
+.map-section .maps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.map-section .map img {
+  min-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.map-section .map span {
+  color: var(--clr-white);
+  display: block;
+  text-align: center;
+}
+
+@media (width > 880px) {
+  .map-section h1 {
+    padding-top: 3rem;
+  }
+  .map-section .maps {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .map-section .map img {
+    width: 450px;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  margin-bottom: 3rem;
+}
+.contact-section h2 {
+  text-align: center;
+  padding: 3rem 0 2rem 0;
+}
+
+.contact-section .buttons {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact-section .buttons a {
+  color: var(--clr-white);
+  background-color: var(--clr-green-main);
+  text-align: center;
+  padding: 10px 1rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.contact-section .buttons a:hover {
+  background-color: rgba(77, 147, 8, 0.7);
+}
+
+@media (width > 880px) {
+  .contact-section .buttons {
+    flex-direction: row;
+  }
+}
