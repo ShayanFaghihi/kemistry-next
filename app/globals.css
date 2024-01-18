@@ -18,6 +18,7 @@
   --clr-white: #fff;
   --clr-blue-dark: #011425;
   --clr-blue-light: #013553;
+  --clr-red: #d12121;
 
   --box-glow: radial-gradient(rgba(0, 60, 91, 1), rgba(0, 1, 32, 1));
   --box-glow-hover: radial-gradient(rgb(34, 86, 113) 20%, rgba(0, 1, 32, 1));

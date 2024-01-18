@@ -1,3 +1,5 @@
+import { Toaster } from "react-hot-toast";
+
 export const metadata = {
   title: "Contact - Kemistry Night Club",
   description:
@@ -5,5 +7,10 @@ export const metadata = {
 };
 
 export default function ContactPageLayout({ children }) {
-  return children;
+  return (
+    <>
+      {children}
+      <Toaster />
+    </>
+  );
 }
