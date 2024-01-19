@@ -4,11 +4,13 @@ import Container from "@/components/UI/container";
 
 export default function GalleryPage() {
   return (
-    <section className={classes["gallery-section"]}>
-      <Container>
-        <h1>Events Gallery</h1>
-        <GalleryGrid />
-      </Container>
-    </section>
+    <main>
+      <section className={classes["gallery-section"]}>
+        <Container>
+          <h1>Events Gallery</h1>
+          <GalleryGrid />
+        </Container>
+      </section>
+    </main>
   );
 }

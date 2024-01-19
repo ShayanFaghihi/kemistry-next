@@ -10,7 +10,7 @@ export default async function HomePage() {
   const events = await getEvents();
 
   return (
-    <>
+    <main>
       <Hero />
       <EventsSlider events={events} />
       <section className={classes["about-section"]}>
@@ -25,6 +25,6 @@ export default async function HomePage() {
         </Container>
       </section>
       <Gallery />
-    </>
+    </main>
   );
 }

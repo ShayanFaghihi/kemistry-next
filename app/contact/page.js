@@ -4,11 +4,13 @@ import ContactForm from "@/components/contact/contact-form";
 
 export default function ContactPage() {
   return (
-    <section className={classes["contact-section"]}>
-      <Container>
-        <h1>Contact Us</h1>
-        <ContactForm />
-      </Container>
-    </section>
+    <main>
+      <section className={classes["contact-section"]}>
+        <Container>
+          <h1>Contact Us</h1>
+          <ContactForm />
+        </Container>
+      </section>
+    </main>
   );
 }

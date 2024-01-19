@@ -19,7 +19,7 @@ export default function TableReservationPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <main>
       <section className={classes["map-section"]}>
         <Container className={classes["map-container"]}>
           <h1>Table Reservation</h1>
@@ -67,6 +67,6 @@ export default function TableReservationPage() {
           </div>
         </Container>
       </section>
-    </>
+    </main>
   );
 }
