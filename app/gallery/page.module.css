@@ -1,0 +1,13 @@
+.gallery-section {
+  padding-block: 2rem;
+  background-image: linear-gradient(
+    180deg,
+    var(--clr-blue-dark) 30%,
+    var(--clr-blue-light) 69%
+  );
+}
+
+.gallery-section h1 {
+  text-align: center;
+  padding-bottom: 1rem;
+}

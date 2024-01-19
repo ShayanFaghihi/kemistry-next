@@ -1,0 +1,8 @@
+.gallery {
+  text-align: center;
+}
+
+.gallery img {
+  margin: 1rem;
+  object-fit: cover;
+}
