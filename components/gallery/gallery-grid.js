@@ -25,24 +25,26 @@ const galleryArr = [
 ];
 
 export default function GalleryGrid() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [imageIndex, setImageIndex] = useState(-1);
   return (
     <div className={classes.gallery}>
-      {galleryArr.map((img) => (
+      {galleryArr.map((img, index) => (
         <Image
-          key={img.src}
+          key={index}
           src={img.src}
           alt={img.alt}
           width={300}
           height={300}
-          onClick={() => setIsOpen(true)}
+          onClick={() => setImageIndex(index)}
         />
       ))}
       <Lightbox
-        open={isOpen}
-        close={() => setIsOpen(false)}
+        open={imageIndex >= 0}
+        close={() => setImageIndex(-1)}
         slides={galleryArr.map((img) => img.src)}
+        index={imageIndex}
         render={{ slide: ImageLightBox }}
+        controller={{ closeOnBackdropClick: true }}
       />
     </div>
   );

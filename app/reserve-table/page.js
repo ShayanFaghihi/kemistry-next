@@ -16,7 +16,7 @@ import groundLevel from "@/assets/Ground-Level.jpeg";
 import secondLevel from "@/assets/Second-Level.jpeg";
 
 export default function TableReservationPage() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [imageIndex, setImageIndex] = useState(-1);
 
   return (
     <main>
@@ -26,7 +26,7 @@ export default function TableReservationPage() {
           <div className={classes.maps}>
             <div className={classes.map}>
               <Image
-                onClick={() => setIsOpen(true)}
+                onClick={() => setImageIndex(0)}
                 src={groundLevel}
                 width={300}
                 height={300}
@@ -36,8 +36,8 @@ export default function TableReservationPage() {
             </div>
             <div className={classes.map}>
               <Image
-                onClick={() => setIsOpen(true)}
-                src={groundLevel}
+                onClick={() => setImageIndex(1)}
+                src={secondLevel}
                 width={300}
                 height={300}
                 alt="Kemistry Night Club map - Second Level"
@@ -45,10 +45,12 @@ export default function TableReservationPage() {
               <span>Second Level</span>
             </div>
             <Lightbox
-              open={isOpen}
-              close={() => setIsOpen(false)}
+              open={imageIndex >= 0}
+              close={() => setImageIndex(-1)}
+              index={imageIndex}
               slides={[groundLevel, secondLevel]}
               render={{ slide: ImageLightBox }}
+              controller={{ closeOnBackdropClick: true }}
             />
           </div>
         </Container>

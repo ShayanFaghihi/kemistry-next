@@ -5,4 +5,5 @@
 .gallery img {
   margin: 1rem;
   object-fit: cover;
+  cursor: pointer;
 }
