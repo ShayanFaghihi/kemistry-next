@@ -36,7 +36,7 @@ export default function ContactForm() {
     });
   };
 
-  const submitFormHandler = async (e) => {
+  const submitFormHandler = (e) => {
     e.preventDefault();
     if (values.email && values.message && values.phone) {
       const response = fetch("/api/send", {
@@ -51,8 +51,11 @@ export default function ContactForm() {
         response,
         {
           loading: "Sending your message....",
-          success: () =>
-            `Thanks ${values.name}, Your message was successfully sent!`,
+          success: () => {
+            setFormData(initialState);
+            setTouchedInputs([]);
+            return `Thanks ${values.name}, Your message was successfully sent!`;
+          },
           error: (err) => `This just happened: ${err.toString()}`,
         },
         {
@@ -66,11 +69,6 @@ export default function ContactForm() {
           },
         }
       );
-
-      if (response.ok) {
-        setFormData(initialState);
-        setTouchedInputs([]);
-      }
     }
   };
 

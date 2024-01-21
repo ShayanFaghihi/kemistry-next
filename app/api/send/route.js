@@ -10,7 +10,7 @@ export async function POST(request) {
     const { name, email, phone, message } = body.values;
     const data = await resend.emails.send({
       from: "Kemistry Night Club <info@kemistrynightclub.com>",
-      to: ["shayan.faghihi93@gmail.com,info@kemistrynightclub.com"],
+      to: ["shayan.faghihi93@gmail.com", "info@kemistrynightclub.com"],
       subject: "New Contact from the Kemistry Website",
       react: EmailTemplate({ name, email, phone, message }),
     });
