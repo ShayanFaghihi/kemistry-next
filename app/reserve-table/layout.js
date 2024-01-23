@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Reserve Table - Kemistry Night Club",
+  title: "Reserve Table - Kemistry Nightclub",
   description:
-    "Reserve a VIP table for our upcoming events for having a better experience at Kemistry Night Club stunning events",
+    "Reserve a VIP table for our upcoming events for having a better experience at Kemistry Nightclub stunning events",
 };
 
 export default function TableReservationLayout({ children }) {

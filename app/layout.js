@@ -5,7 +5,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 
 export const metadata = {
-  title: "Home - Kemistry Night Club",
+  title: "Home - Kemistry Nightclub",
   description:
     "Kemistry a new music venue in downtown Fort Lauderdale providing elevated experiences with best production, world class hospitality, and great sense of community",
 };
