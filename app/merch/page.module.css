@@ -1,0 +1,31 @@
+.merch-section {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-block: 2rem;
+  background-image: linear-gradient(
+    180deg,
+    var(--clr-blue-dark) 30%,
+    var(--clr-blue-light) 69%
+  );
+}
+
+.merch-section h1 {
+  color: var(--clr-white);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.merch-section a {
+  color: var(--clr-white);
+  border: 1px solid var(--clr-white);
+  padding: 10px 1rem;
+  font: var(--font-sub-heading);
+  transition: all 0.3s ease-in;
+}
+
+.merch-section a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
