@@ -1,11 +1,31 @@
 .events-section {
   padding-block: 4rem 2rem;
+  text-align: center;
 }
 
 .events-section h2 {
   font: var(--font-sub-heading);
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.events-section .error p {
+  text-align: center;
+  color: var(--clr-white);
+}
+
+.events-section .error a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--clr-white);
+  border: 1px solid var(--clr-white);
+  padding: 10px 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+
+.events-section .error a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .event-box {
   width: 100%;

@@ -5,6 +5,8 @@ import Hero from "@/components/hero/hero";
 import Container from "@/components/UI/container";
 import EventsSlider from "@/components/events/events-slider";
 import Gallery from "@/components/gallery/gallery";
+import { Suspense } from "react";
+import LoadingIndicator from "@/components/UI/loading-indicator";
 
 export default async function HomePage() {
   const events = await getEvents();
@@ -12,7 +14,9 @@ export default async function HomePage() {
   return (
     <main>
       <Hero />
-      <EventsSlider events={events} />
+      <Suspense fallback={<LoadingIndicator />}>
+        <EventsSlider events={events} />
+      </Suspense>
       <section className={classes["about-section"]}>
         <Container className={classes.container}>
           <h2>About Us</h2>
