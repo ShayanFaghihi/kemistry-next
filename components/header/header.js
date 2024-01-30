@@ -44,7 +44,11 @@ export default function Header() {
                 : `${classes["mobile-menu__slideIn"]}`
             }
           >
-            <Link href="/" className={classes.logo}>
+            <Link
+              href="/"
+              className={classes.logo}
+              onClick={() => setSlideIn(false)}
+            >
               <Image
                 alt="Kemistry Night Club 3D Logo"
                 src={mobileLogo}
@@ -58,19 +62,31 @@ export default function Header() {
             <nav>
               <ul>
                 <li>
-                  <Link href="/events">Events</Link>
+                  <Link href="/events" onClick={() => setSlideIn(false)}>
+                    Events
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/gallery">Gallery</Link>
+                  <Link href="/gallery" onClick={() => setSlideIn(false)}>
+                    Gallery
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/contact" onClick={() => setSlideIn(false)}>
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </nav>
             <div className={classes["nav-btn"]}>
-              <Link href="/reserve-table">Table Reservation</Link>
-              <Link target="_blank" href="https://link.dice.fm/kemistry">
+              <Link href="/reserve-table" onClick={() => setSlideIn(false)}>
+                Table Reservation
+              </Link>
+              <Link
+                target="_blank"
+                href="https://link.dice.fm/kemistry"
+                onClick={() => setSlideIn(false)}
+              >
                 Tickets
               </Link>
             </div>
