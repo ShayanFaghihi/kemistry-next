@@ -8,6 +8,10 @@ export const metadata = {
   title: "Home - Kemistry Nightclub",
   description:
     "Kemistry a new music venue in downtown Fort Lauderdale providing elevated experiences with best production, world class hospitality, and great sense of community",
+  metadataBase: new URL("https://kemistrynightclub.com/"),
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const rajdhani = Rajdhani({
