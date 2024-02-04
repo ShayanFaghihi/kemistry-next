@@ -1,5 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Rajdhani } from "next/font/google";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
