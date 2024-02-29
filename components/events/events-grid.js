@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from "react";
+import Image from "next/image";
 import LoadingIndicator from "../UI/loading-indicator";
+import EventBox from "./event-box";
 
 import classes from "./events-grid.module.css";
 
@@ -49,6 +51,16 @@ export default function EventsGrid() {
       <h1 className={classes.heading}>Kemistry Upcoming Events</h1>
       <div id="dice-event-list-widget" className={classes["events-widget"]}>
         <LoadingIndicator />
+      </div>
+      <div>
+        <EventBox
+          eventData={{
+            images: ["/clan-of-xymox.jpeg"],
+            name: "Clan of XYMOX",
+            date: "2024-06-21T03:00:00Z",
+            url: "https://www.eventbrite.com/e/clan-of-xymox-x-odus-tour-with-curse-mackey-sine-fort-lauderdale-tickets-829025787447",
+          }}
+        />
       </div>
     </>
   );
