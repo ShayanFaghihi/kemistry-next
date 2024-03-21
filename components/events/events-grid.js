@@ -46,23 +46,6 @@ export default function EventsGrid() {
     };
   }, []);
 
-  // Define the UTC time string
-  const utcTimeString = "2024-06-21T03:00:00Z";
-
-  // Create a new Date object using the UTC time string
-  const utcDate = new Date(utcTimeString);
-
-  // Get the local time zone offset in milliseconds
-  const timeZoneOffset = utcDate.getTimezoneOffset() * 60000; // Convert minutes to milliseconds
-
-  // Calculate the local time by subtracting the time zone offset
-  const localTime = new Date(utcDate.getTime() - timeZoneOffset);
-
-  // Format the local time in Eastern Time Zone (UTC-4 during daylight saving time)
-  const easternTime = localTime.toLocaleString("en-US", {
-    timeZone: "America/New_York",
-  });
-
   return (
     <>
       <h1 className={classes.heading}>Kemistry Upcoming Events</h1>
@@ -74,7 +57,7 @@ export default function EventsGrid() {
           eventData={{
             images: ["/clan-of-xymox.jpeg"],
             name: "Clan of XYMOX",
-            date: easternTime,
+            date: "2024-06-21T01:00:00Z",
             url: "https://www.eventbrite.com/e/clan-of-xymox-x-odus-tour-with-curse-mackey-sine-fort-lauderdale-tickets-829025787447",
           }}
         />
