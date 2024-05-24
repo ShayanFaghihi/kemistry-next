@@ -56,7 +56,7 @@ export default async function EventsGrid() {
       <div id="dice-event-list-widget" className={classes["events-widget"]}>
         <Suspense fallback={<LoadingIndicator />}>
           {events.map((event) => (
-            <EventGridBox eventData={event} />
+            <EventGridBox key={event.id} eventData={event} />
           ))}
         </Suspense>
       </div>
