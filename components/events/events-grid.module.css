@@ -2,3 +2,10 @@
   text-align: center;
   padding-block: 2rem;
 }
+
+.events-widget {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
