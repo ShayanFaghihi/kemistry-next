@@ -53,6 +53,27 @@
   font-size: 16px;
   text-transform: uppercase;
 }
+
+.footer-contact hr {
+  width: 50%;
+  margin-left: 25%;
+  margin-block: 1rem;
+  opacity: 0.5;
+}
+
+.footer-sponsors h3 {
+  color: var(--clr-white);
+  font-size: 1rem;
+}
+
+.footer-sponsors ul {
+  list-style: none;
+}
+
+.footer-sponsors ul img {
+  height: auto;
+}
+
 .footer-social {
   text-align: center;
   color: var(--clr-white);

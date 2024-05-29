@@ -11,6 +11,7 @@ import {
 
 import classes from "./footer.module.css";
 import logoWhite from "@/assets/whiteLogo.png";
+import beatboxLogo from "@/assets/BeatBoxLogo2024.png";
 
 export default function Footer() {
   return (
@@ -32,6 +33,17 @@ export default function Footer() {
             />
             <button type="submit">Sign Up</button>
           </form>
+          <hr />
+          <div className={classes["footer-sponsors"]}>
+            <h3>Official Sponsors</h3>
+            <ul>
+              <li>
+                <a href="https://beatboxbeverages.com/" target="_blank">
+                  <Image src={beatboxLogo} alt="Beatbox Logo" width={100} />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className={classes["footer-social"]}>
           <a href="mailto:info@kemistrynightclub.com">
