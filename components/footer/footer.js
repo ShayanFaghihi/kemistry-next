@@ -25,10 +25,12 @@ export default function Footer() {
   const resend = new Resend(`${RESEND_API_KEY}`);
   const addContactHandler = (e) => {
     e.preventDefault();
-    resend.contacts.create({
-      email: userEmail,
-      unsubscribed: false,
-      audienceId: "7d0ff667-7ea2-4266-a355-6374279c01eb",
+    const response = fetch("/api/send/add_contact", {
+      method: "POST",
+      body: JSON.stringify(userEmail),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
   };
 

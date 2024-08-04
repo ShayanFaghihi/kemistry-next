@@ -39,7 +39,7 @@ export default function ContactForm() {
   const submitFormHandler = (e) => {
     e.preventDefault();
     if (values.email && values.message && values.phone) {
-      const response = fetch("/api/send", {
+      const response = fetch("/api/send/message", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
