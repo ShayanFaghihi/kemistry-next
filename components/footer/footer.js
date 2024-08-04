@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Resend } from "resend";
 
 import Image from "next/image";
 import Container from "../UI/container";
@@ -16,8 +15,6 @@ import {
 import classes from "./footer.module.css";
 import logoWhite from "@/assets/whiteLogo.png";
 import beatboxLogo from "@/assets/BeatBoxLogo2024.png";
-
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 export default function Footer() {
   const [userEmail, setUserEmail] = useState("");
