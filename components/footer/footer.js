@@ -22,10 +22,9 @@ const RESEND_API_KEY = process.env.RESEND_API_KEY;
 export default function Footer() {
   const [userEmail, setUserEmail] = useState("");
 
-  const resend = new Resend(`${RESEND_API_KEY}`);
   const addContactHandler = (e) => {
     e.preventDefault();
-    const response = fetch("/api/send/add_contact", {
+    const response = fetch("/api/audience", {
       method: "POST",
       body: JSON.stringify(userEmail),
       headers: {

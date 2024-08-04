@@ -7,8 +7,11 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const { userEmail } = body.values;
+
     const data = await resend.contacts.create({
-      email: userEmail,
+      email: "steve.wozniak@gmail.com",
+      firstName: "Steve",
+      lastName: "Wozniak",
       unsubscribed: false,
       audienceId: "7d0ff667-7ea2-4266-a355-6374279c01eb",
     });
