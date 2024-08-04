@@ -135,9 +135,9 @@ export default function ReserveForm() {
               : classes["form-group"]
           }
         >
+          <label>Date of Booking *</label>
           <input
             type="date"
-            placeholder="Date of Booking *"
             id="bookingDate"
             name="bookingDate"
             value={values.bookingDate}
