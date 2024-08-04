@@ -155,6 +155,8 @@ export default function ReserveForm() {
         >
           <input
             type="number"
+            min={1}
+            step={1}
             placeholder="Party Size *"
             id="partySize"
             name="partySize"
