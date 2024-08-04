@@ -1,4 +1,4 @@
-import { EmailMessageTemplate } from "@/components/contact/email-template";
+import { EmailReservationTemplate } from "@/components/contact/email-template";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -7,12 +7,18 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, phone, message } = body.values;
+    const { name, email, phone, bookingDate, partySize } = body.values;
     const data = await resend.emails.send({
       from: "Kemistry Night Club <info@kemistrynightclub.com>",
-      to: ["shayan.faghihi93@gmail.com", "info@kemistrynightclub.com"],
-      subject: "New Contact from the Kemistry Website",
-      react: EmailMessageTemplate({ name, email, phone, message }),
+      to: ["shayan.faghihi93@gmail.com", "vip@kemistrynightclub.com"],
+      subject: "New Table Reservation from the Kemistry Website",
+      react: EmailReservationTemplate({
+        name,
+        email,
+        phone,
+        bookingDate,
+        partySize,
+      }),
     });
 
     if (data.status === "success") {

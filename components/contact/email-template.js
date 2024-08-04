@@ -1,4 +1,4 @@
-export const EmailTemplate = ({ name, phone, email, message }) => (
+export const EmailMessageTemplate = ({ name, phone, email, message }) => (
   <div>
     <h1>Hello admin,</h1>
     <p>There is a message from the website contact form:</p>
@@ -8,6 +8,28 @@ export const EmailTemplate = ({ name, phone, email, message }) => (
         <li>Phone: {phone}</li>
         <li>Email: {email}</li>
         <li>Message: {message}</li>
+      </ul>
+    </div>
+  </div>
+);
+
+export const EmailReservationTemplate = ({
+  name,
+  phone,
+  email,
+  bookingDate,
+  partySize,
+}) => (
+  <div>
+    <h1>Hello admin,</h1>
+    <p>There is a new Table Reservation: </p>
+    <div>
+      <ul>
+        <li>Name: {name}</li>
+        <li>Phone: {phone}</li>
+        <li>Email: {email}</li>
+        <li>Date of Booking: {bookingDate}</li>
+        <li>Party Size: {partySize}</li>
       </ul>
     </div>
   </div>

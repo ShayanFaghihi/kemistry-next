@@ -9,6 +9,7 @@ import "yet-another-react-lightbox/styles.css";
 import Container from "@/components/UI/container";
 import ImageLightBox from "@/components/UI/image-lightbox";
 import classes from "./page.module.css";
+import ReserveForm from "@/components/contact/reserve-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -58,6 +59,9 @@ export default function TableReservationPage() {
       <section className={classes["contact-section"]}>
         <Container>
           <h2>Reserve Now</h2>
+          <div className={classes["reserve-form"]}>
+            <ReserveForm />
+          </div>
           <div className={classes.buttons}>
             <Link href="tel:(954)20297-9255">
               <FontAwesomeIcon icon={faPhone} /> Call Now (954) 297-9255
