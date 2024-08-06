@@ -36,9 +36,8 @@ export default function Footer() {
       {
         loading: "Sending your request....",
         success: () => {
-          setFormData(initialState);
-          setTouchedInputs([]);
-          return `Thanks ${values.name}, Your email was successfully sent!`;
+          setUserEmail("");
+          return `Thanks! Your email was added to our community list.`;
         },
         error: (err) => `This just happened: ${err.toString()}`,
       },
@@ -70,6 +69,7 @@ export default function Footer() {
               name="email"
               id="email"
               placeholder="Enter a valid email address"
+              value={userEmail}
               onChange={(e) => setUserEmail(e.target.value)}
               required
             />
