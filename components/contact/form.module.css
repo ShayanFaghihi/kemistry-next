@@ -1,11 +1,4 @@
-.form-container {
-  width: min(100%, 700px);
-  margin-inline: auto;
-  background-color: var(--clr-blue-dark);
-  padding: 2rem;
-}
-
-.form-container form {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,12 +6,12 @@
   gap: 1rem;
 }
 
-.form-container .form-group {
+.form-group {
   width: 100%;
 }
 
-.form-container form input,
-.form-container form textarea {
+.form input,
+.form textarea {
   width: 100%;
   border: none;
   outline: none;
@@ -29,12 +22,12 @@
   position: relative;
 }
 
-.form-container .form-group.invalid input,
-.form-container .form-group.invalid textarea {
+.form-group.invalid input,
+.form-group.invalid textarea {
   outline: 1px solid var(--clr-red);
 }
 
-.form-container form button {
+.form button {
   cursor: pointer;
   display: inline-block;
   width: max-content;
@@ -50,7 +43,7 @@
   min-height: 50px;
 }
 
-.form-container form button:disabled {
+.form button:disabled {
   background-color: #929292;
   cursor: not-allowed;
 }

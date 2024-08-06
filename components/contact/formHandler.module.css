@@ -13,7 +13,7 @@
   gap: 1rem;
 }
 
-.form-container .form-group {
+.form-group {
   width: 100%;
 }
 
@@ -29,13 +29,8 @@
   position: relative;
 }
 
-.form-container .form-group label {
-  color: #fff;
-  line-height: 1.7;
-}
-
-.form-container .form-group.invalid input,
-.form-container .form-group.invalid textarea {
+.form-group.invalid input,
+.form-group.invalid textarea {
   outline: 1px solid var(--clr-red);
 }
 

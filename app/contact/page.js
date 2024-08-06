@@ -1,6 +1,6 @@
 import Container from "@/components/UI/container";
 import classes from "./page.module.css";
-import ContactForm from "@/components/contact/contact-form";
+import Form from "@/components/contact/formHandler";
 
 export default function ContactPage() {
   return (
@@ -8,7 +8,7 @@ export default function ContactPage() {
       <section className={classes["contact-section"]}>
         <Container>
           <h1>Contact Us</h1>
-          <ContactForm />
+          <Form formType="contact" />
         </Container>
       </section>
     </main>

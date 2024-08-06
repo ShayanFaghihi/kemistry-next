@@ -9,12 +9,13 @@ import "yet-another-react-lightbox/styles.css";
 import Container from "@/components/UI/container";
 import ImageLightBox from "@/components/UI/image-lightbox";
 import classes from "./page.module.css";
-import ReserveForm from "@/components/contact/reserve-form";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import groundLevel from "@/assets/Ground-Level.jpeg";
 import secondLevel from "@/assets/Second-Level.jpeg";
+import Form from "@/components/contact/formHandler";
 
 export default function TableReservationPage() {
   const [imageIndex, setImageIndex] = useState(-1);
@@ -60,7 +61,7 @@ export default function TableReservationPage() {
         <Container>
           <h2>Reserve Now</h2>
           <div className={classes["reserve-form"]}>
-            <ReserveForm />
+            <Form formType="reserve" />
           </div>
           <div className={classes.buttons}>
             <Link href="tel:(954)20297-9255">

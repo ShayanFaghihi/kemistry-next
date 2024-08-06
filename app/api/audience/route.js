@@ -6,13 +6,18 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { userEmail, firstName, lastName } = body;
+    const { userEmail } = body;
+
+    // Validate the email and audienceId
+    if (!userEmail) {
+      throw new Error("Missing required fields");
+    }
 
     // Make sure to pass the received values
     const data = await resend.contacts.create({
       email: userEmail,
-      firstName: "firstName",
-      lastName: "lastName",
+      firstName: "",
+      lastName: "",
       unsubscribed: false,
       audienceId: "7d0ff667-7ea2-4266-a355-6374279c01eb",
     });
