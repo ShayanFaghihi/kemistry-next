@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 import Image from "next/image";
 import Container from "../UI/container";
@@ -21,13 +22,37 @@ export default function Footer() {
 
   const addContactHandler = (e) => {
     e.preventDefault();
+
     const response = fetch("/api/audience", {
       method: "POST",
-      body: JSON.stringify(userEmail),
+      body: JSON.stringify({ userEmail }),
       headers: {
         "Content-Type": "application/json",
       },
     });
+
+    toast.promise(
+      response,
+      {
+        loading: "Sending your request....",
+        success: () => {
+          setFormData(initialState);
+          setTouchedInputs([]);
+          return `Thanks ${values.name}, Your email was successfully sent!`;
+        },
+        error: (err) => `This just happened: ${err.toString()}`,
+      },
+      {
+        position: "bottom-center",
+
+        style: {
+          minWidth: "250px",
+        },
+        success: {
+          duration: 5000,
+        },
+      }
+    );
   };
 
   return (
@@ -49,6 +74,7 @@ export default function Footer() {
               required
             />
             <button type="submit">Sign Up</button>
+            <Toaster />
           </form>
           <hr />
           <div className={classes["footer-sponsors"]}>
