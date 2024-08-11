@@ -1,6 +1,6 @@
 export const EmailMessageTemplate = ({ name, phone, email, message }) => (
   <div>
-    <h1>Hello admin,</h1>
+    <h1>Hello,</h1>
     <p>There is a message from the website contact form:</p>
     <div>
       <ul>
@@ -21,7 +21,7 @@ export const EmailReservationTemplate = ({
   partySize,
 }) => (
   <div>
-    <h1>Hello admin,</h1>
+    <h1>Hello,</h1>
     <p>There is a new Table Reservation: </p>
     <div>
       <ul>
