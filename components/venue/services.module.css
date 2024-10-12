@@ -1,0 +1,20 @@
+.services-section .slider .service-slide {
+  position: relative;
+}
+
+.services-section .slider .service-slide .service-text {
+  background-color: #fff !important;
+  width: 90%;
+  margin-left: 5%;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 10px 10px;
+  margin-top: -1rem;
+  vertical-align: top;
+}
+
+.services-section .slider img {
+  height: auto;
+  width: 100%;
+}

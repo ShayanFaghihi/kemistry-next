@@ -243,7 +243,7 @@ export default function Form({ formType }) {
                 : classes["form-group"]
             }
           >
-            <label>Date of Booking *</label>
+            <label className={classes["date-label"]}>Date of Booking *</label>
             <input
               type="date"
               id="bookingDate"

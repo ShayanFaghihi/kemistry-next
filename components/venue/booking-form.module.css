@@ -1,8 +1,6 @@
 .form-container {
   width: min(100%, 700px);
   margin-inline: auto;
-  background-color: var(--clr-blue-dark);
-  padding: 2rem;
 }
 
 .form-container form {
@@ -10,9 +8,14 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 }
-
+.form-container .row {
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .form-group {
   width: 100%;
 }
@@ -23,23 +26,24 @@
   width: 100%;
   border: none;
   outline: none;
-  padding: 10px 1rem;
-  background-color: var(--clr-blue-light);
-  color: var(--clr-white);
-  font: var(--font-body);
+  padding: 5px;
+  background-color: var(--clr-grey);
+  color: var(--clr-blue-dark);
+  font-size: 12px;
   position: relative;
 }
-
 .form-container form label {
-  color: var(--clr-white);
-  opacity: 0.7;
-  padding-bottom: 10px;
-  display: inline-block;
+  font-size: 12px;
 }
 
 .form-group.invalid input,
 .form-group.invalid textarea {
   outline: 1px solid var(--clr-red);
+}
+.form-container .form-submit {
+  width: 100%;
+  text-align: right;
+  margin-top: 1rem;
 }
 
 .form-container form button {
@@ -48,14 +52,13 @@
   width: max-content;
   border: none;
   outline: none;
-  padding: 10px 2rem;
   background-color: var(--clr-green-main);
   color: var(--clr-white);
   text-transform: uppercase;
   font-size: 1rem;
   position: relative;
   min-width: 100px;
-  min-height: 50px;
+  padding-block: 10px;
 }
 
 .form-container form button:disabled {

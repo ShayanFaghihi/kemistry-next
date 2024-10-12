@@ -34,3 +34,27 @@ export const EmailReservationTemplate = ({
     </div>
   </div>
 );
+
+export const venueReservationTemplate = ({
+  name,
+  phone,
+  email,
+  bookingDate,
+  eventSize,
+  eventType,
+}) => (
+  <div>
+    <h1>Hello,</h1>
+    <p>There is a new Venue Rental Request: </p>
+    <div>
+      <ul>
+        <li>Name: {name}</li>
+        <li>Phone: {phone}</li>
+        <li>Email: {email}</li>
+        <li>Date of Booking: {bookingDate}</li>
+        <li>Event Type: {eventType}</li>
+        <li>Event Size: {eventSize}</li>
+      </ul>
+    </div>
+  </div>
+);

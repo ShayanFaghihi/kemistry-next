@@ -72,6 +72,11 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/venue-rental" onClick={() => setSlideIn(false)}>
+                    Venue Rental
+                  </Link>
+                </li>
+                <li>
                   <Link href="/contact" onClick={() => setSlideIn(false)}>
                     Contact
                   </Link>
@@ -100,6 +105,9 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/gallery">Gallery</Link>
+              </li>
+              <li>
+                <Link href="/venue-rental">Venue Rental</Link>
               </li>
               <li>
                 <Link href="/contact">Contact</Link>
