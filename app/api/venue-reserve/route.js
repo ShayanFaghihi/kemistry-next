@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, phone, bookingDate, eventSize, eventType } =
+    const { name, email, phone, bookingDate, eventSize, eventType, message } =
       body.values;
     const data = await resend.emails.send({
       from: "Kemistry Night Club <info@kemistrynightclub.com>",
@@ -21,6 +21,7 @@ export async function POST(request) {
         eventType,
         bookingDate,
         eventSize,
+        message,
       }),
     });
 

@@ -42,6 +42,7 @@ export const venueReservationTemplate = ({
   bookingDate,
   eventSize,
   eventType,
+  message,
 }) => (
   <div>
     <h1>Hello,</h1>
@@ -51,9 +52,10 @@ export const venueReservationTemplate = ({
         <li>Name: {name}</li>
         <li>Phone: {phone}</li>
         <li>Email: {email}</li>
-        <li>Date of Booking: {bookingDate}</li>
         <li>Event Type: {eventType}</li>
         <li>Event Size: {eventSize}</li>
+        <li>Date of Booking: {bookingDate}</li>
+        <li>Message: {message}</li>
       </ul>
     </div>
   </div>
