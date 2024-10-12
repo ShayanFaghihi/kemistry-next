@@ -34,8 +34,8 @@ export default function VenueServices() {
     <div className={classes["services-section"]}>
       <Slider {...settings} className={classes.slider}>
         {galleryArr.map((img) => (
-          <div className={classes["service-slide"]}>
-            <Image key={img.src} src={img.src} alt={img.alt} />
+          <div key={img.src} className={classes["service-slide"]}>
+            <Image src={img.src} alt={img.alt} />
             <span className={classes["service-text"]}>{img.serviceText}</span>
           </div>
         ))}
