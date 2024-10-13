@@ -11,7 +11,7 @@ export async function POST(request) {
       body.values;
     const data = await resend.emails.send({
       from: "Kemistry Night Club <info@kemistrynightclub.com>",
-      to: ["shayan.faghihi93@gmail.com"],
+      to: ["shayan.faghihi93@gmail.com", "danny@kemistrynightclub.com"],
       reply_to: email,
       subject: "New Venue Rental Reservation from the Kemistry Website",
       react: venueReservationTemplate({
