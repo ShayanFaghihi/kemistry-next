@@ -2,7 +2,7 @@
 .hero-section {
   width: 100%;
   min-height: 50vh;
-  position: relative;
+  position: sticky;
 }
 
 .hero-section::before {
@@ -11,7 +11,7 @@
   right: -10%;
   left: -10%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -23,6 +23,12 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
+}
+
+.hero-section .hero-vid {
+  width: 120%;
+  height: 100%;
+  margin-left: -10%;
 }
 
 .hero-section h1,
@@ -60,7 +66,7 @@
 }
 @media (width>900px) {
   .hero-section {
-    min-height: 90vh;
+    min-height: 80vh;
   }
   .hero-section h1 {
     font-size: 2rem;

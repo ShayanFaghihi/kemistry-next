@@ -1,27 +1,59 @@
 import Image from "next/image";
+import { Suspense } from "react";
+import { list } from "@vercel/blob";
+
 import Container from "@/components/UI/container";
 import BookingForm from "@/components/venue/booking-form";
 
-import heroBg from "@/assets/venue/hero.webp";
 import infoImg from "@/assets/venue/info.webp";
 import features from "@/assets/venue/features.jpg";
 import kemistryEntry from "@/assets/venue/kemistryEntry.jpg";
+import heroBg from "@/assets/venue/hero.webp";
 
 import classes from "./page.module.css";
 
 import VenueSlider from "@/components/gallery/venue-slider";
 import VenueServices from "@/components/venue/services";
 
+async function HeroVideo({ fileName }) {
+  const { blobs } = await list({
+    prefix: fileName,
+    limit: 1,
+  });
+  const { url } = blobs[0];
+
+  return (
+    <video
+      aria-label="Video player"
+      autoPlay
+      loop
+      muted
+      preload="none"
+      className={classes["hero-vid"]}
+    >
+      <source src={url} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  );
+}
+
 export default function VenueRental() {
   return (
     <Container>
       <section className={classes["hero-section"]}>
-        <Image
-          src={heroBg}
-          alt="Kemistry Nightclub venue rental hero background"
-          className={classes["hero-bg"]}
-          priority
-        />
+        <Suspense
+          fallback={
+            <Image
+              src={heroBg}
+              alt="Kemistry Nightclub venue rental hero background"
+              className={classes["hero-bg"]}
+              priority
+            />
+          }
+        >
+          <HeroVideo fileName="hero-kapvdev3WvEV7EYfFYfY71tDYyX42N.mp4" />
+        </Suspense>
+
         <h1>
           Kemistry offers a variety of event planning services to help clients
           create and execute their vision
