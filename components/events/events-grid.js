@@ -1,11 +1,6 @@
 "use client";
-import { Suspense } from "react";
-import { getEvents } from "@/lib/events";
-
 import { useEffect } from "react";
 import LoadingIndicator from "../UI/loading-indicator";
-import EventBox from "./event-box";
-import EventGridBox from "./event-grid-box";
 
 import classes from "./events-grid.module.css";
 
