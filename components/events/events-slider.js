@@ -10,13 +10,14 @@ import EventBox from "./event-box";
 import Container from "../UI/container";
 
 export default function EventsSlider({ events }) {
+  const openEvents = events?.filter((event) => event.status !== "cancelled");
   return (
     <section className={classes["events-section"]}>
       <Container>
         <h2>Upcoming Events</h2>
-        {events ? (
+        {openEvents ? (
           <Slider {...settings}>
-            {events?.map((event) => (
+            {openEvents?.map((event) => (
               <EventBox
                 className={classes["event-box"]}
                 key={event.id}

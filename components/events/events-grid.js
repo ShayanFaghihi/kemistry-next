@@ -25,7 +25,7 @@ export default function EventsGrid() {
         showAudio: true,
         showNewBadge: false,
         hidePostponed: false,
-        hideCancelled: false,
+        hideCancelled: true,
         layout: "gallery",
         roundButtons: false,
         theme: "dark",
