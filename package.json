@@ -24,6 +24,7 @@
     "resend": "^4.4.0",
     "sharp": "^0.34.1",
     "slick-carousel": "^1.8.1",
+    "uuid": "^11.1.0",
     "yet-another-react-lightbox": "^3.23.0"
   },
   "devDependencies": {
