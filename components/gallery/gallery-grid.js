@@ -12,11 +12,11 @@ export default function GalleryGrid({ images }) {
 
   return (
     <div className={classes.gallery}>
-      {images.map((img, index) => (
+      {images.map((img) => (
         <Image
-          key={index}
-          src={`/uploads/${img}`}
-          alt={img}
+          key={img.id}
+          src={img.path}
+          alt={`image-${img.id}`}
           width={300}
           height={300}
           onClick={() => setImageIndex(index)}
@@ -25,7 +25,7 @@ export default function GalleryGrid({ images }) {
       <Lightbox
         open={imageIndex >= 0}
         close={() => setImageIndex(-1)}
-        slides={images.map((img) => ({ src: `/uploads/${img}` }))}
+        slides={images.map((img) => ({ src: img.path }))}
         index={imageIndex}
         render={{ slide: ImageLightBox }}
         controller={{ closeOnBackdropClick: true }}

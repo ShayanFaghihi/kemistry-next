@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import classes from "./page.module.css";
 import Container from "@/components/UI/container";
+import { uploadImage } from "@/actions/uploadImage"; // handles upload to Vercel Blob & Neon DB
 
 export default function AdminPage() {
   const correctPassword = process.env.NEXT_PUBLIC_DASHBOARD_PASSWORD;
@@ -10,12 +11,13 @@ export default function AdminPage() {
   const [password, setPassword] = useState("");
   const [authorized, setAuthorized] = useState(false);
   const [loading, setLoading] = useState(false);
+  const fileInputRef = useRef(null); // to reset input after upload
 
   function handleAuth(e) {
     e.preventDefault();
     if (password === correctPassword) {
       setAuthorized(true);
-      setPassword(""); // clear the password field
+      setPassword("");
     } else {
       alert("Wrong password!");
     }
@@ -25,21 +27,21 @@ export default function AdminPage() {
     e.preventDefault();
     setLoading(true);
 
-    const formData = new FormData();
-    file.forEach((f) => {
-      formData.append("images", f);
-    });
+    try {
+      for (const f of file) {
+        const formData = new FormData();
+        formData.append("image", f);
+        await uploadImage(formData); // upload each image to Vercel Blob and store its path in Neon DB
+      }
 
-    const res = await fetch("/api/upload", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (res.ok) {
       alert("Upload successful!");
-      setFile([]); // reset the file input
-    } else {
-      alert("Upload failed.");
+      setFile([]);
+      if (fileInputRef.current) {
+        fileInputRef.current.value = null;
+      }
+    } catch (error) {
+      console.error("Upload error:", error);
+      alert("Upload failed." + error.message);
     }
 
     setLoading(false);
@@ -70,6 +72,7 @@ export default function AdminPage() {
         <h1>Upload Images to Gallery</h1>
         <form onSubmit={handleSubmit}>
           <input
+            ref={fileInputRef}
             type="file"
             multiple
             accept="image/*"

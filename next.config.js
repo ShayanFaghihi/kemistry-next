@@ -10,6 +10,12 @@ module.exports = {
         port: "",
         pathname: "/attachments/**",
       },
+      {
+        protocol: "https",
+        hostname: "zsri2pqd6j5mhipe.public.blob.vercel-storage.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   async rewrites() {
@@ -19,5 +25,8 @@ module.exports = {
         destination: "/sitemap.xml",
       },
     ];
+  },
+  experimental: {
+    serverActions: true,
   },
 };
