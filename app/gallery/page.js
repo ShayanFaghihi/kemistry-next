@@ -1,19 +1,20 @@
-import fs from "fs";
-import path from "path";
+import { neon } from "@neondatabase/serverless";
 
 import GalleryGrid from "@/components/gallery/gallery-grid";
 import classes from "./page.module.css";
 import Container from "@/components/UI/container";
 
 export default async function GalleryPage() {
-  const dir = path.join(process.cwd(), "public/uploads");
-  const images = fs.readdirSync(dir);
+  // Connect to the Neon database
+  const sql = neon(process.env.DATABASE_URL);
+  const imageUrls = await sql`SELECT * FROM "public"."gallery"`;
+
   return (
     <main>
       <section className={classes["gallery-section"]}>
         <Container>
           <h1>Events Gallery</h1>
-          <GalleryGrid images={images} />
+          <GalleryGrid images={imageUrls} />
         </Container>
       </section>
     </main>
