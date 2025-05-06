@@ -19,7 +19,7 @@ export default function GalleryGrid({ images }) {
           alt={`image-${img.id}`}
           width={300}
           height={300}
-          onClick={() => setImageIndex(index)}
+          onClick={() => setImageIndex(img.id)}
         />
       ))}
       <Lightbox
