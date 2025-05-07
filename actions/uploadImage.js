@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { neon } from "@neondatabase/serverless";
 import { put } from "@vercel/blob";
 
@@ -19,5 +20,7 @@ export async function uploadImage(formData) {
   // Connect to the Neon database
   const sql = neon(`${process.env.DATABASE_URL}`);
   await sql.query('INSERT INTO "public"."gallery" (path) VALUES ($1)', [url]);
+  revalidatePath("/gallery");
+  
   return filename;
 }
