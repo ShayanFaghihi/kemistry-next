@@ -21,5 +21,6 @@ export async function uploadImage(formData) {
   const sql = neon(`${process.env.DATABASE_URL}`);
   await sql.query('INSERT INTO "public"."gallery" (path) VALUES ($1)', [url]);
   revalidatePath("/gallery");
+  
   return filename;
 }
