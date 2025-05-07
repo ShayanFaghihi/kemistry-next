@@ -12,14 +12,14 @@ export default function GalleryGrid({ images }) {
 
   return (
     <div className={classes.gallery}>
-      {images.map((img) => (
+      {images.map((img, index) => (
         <Image
           key={img.id}
           src={img.path}
           alt={`image-${img.id}`}
           width={300}
           height={300}
-          onClick={() => setImageIndex(img.id)}
+          onClick={() => setImageIndex(index)}
         />
       ))}
       <Lightbox
