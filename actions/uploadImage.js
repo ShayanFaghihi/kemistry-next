@@ -1,8 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { neon } from "@neondatabase/serverless";
-import { put } from "@vercel/blob";
+import { supabase } from "@/lib/supabaseClient";
 
 export async function uploadImage(formData) {
   const file = formData.get("image");
@@ -11,16 +10,23 @@ export async function uploadImage(formData) {
   }
 
   const filename = `${Date.now()}-${file.name}`;
+  const filePath = `${filename}`;
 
-  const { url } = await put(filename, file, {
-    access: "public",
-  });
+  const { data, error: uploadError } = await supabase.storage
+    .from("images")
+    .upload(filePath, file);
 
-  // Save image path to DB
-  // Connect to the Neon database
-  const sql = neon(`${process.env.DATABASE_URL}`);
-  await sql.query('INSERT INTO "public"."gallery" (path) VALUES ($1)', [url]);
+  if (uploadError) {
+    throw new Error(uploadError.message);
+  }
+
+  const { error: dbError } = await supabase
+    .from("images")
+    .insert([{ file_path: filePath }]);
+
+  if (dbError) {
+    throw new Error(dbError.message);
+  }
+
   revalidatePath("/gallery");
-  
-  return filename;
 }

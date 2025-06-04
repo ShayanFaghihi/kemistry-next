@@ -31,7 +31,7 @@ export default function AdminPage() {
       for (const f of file) {
         const formData = new FormData();
         formData.append("image", f);
-        await uploadImage(formData); // upload each image to Vercel Blob and store its path in Neon DB
+        await uploadImage(formData); // upload each image to Supabase
       }
 
       alert("Upload successful!");
@@ -47,24 +47,24 @@ export default function AdminPage() {
     setLoading(false);
   }
 
-  if (!authorized) {
-    return (
-      <Container>
-        <div className={classes.container}>
-          <h1>Enter Admin Password</h1>
-          <form onSubmit={handleAuth}>
-            <input
-              type="password"
-              value={password}
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type="submit">Enter</button>
-          </form>
-        </div>
-      </Container>
-    );
-  }
+  // if (!authorized) {
+  //   return (
+  //     <Container>
+  //       <div className={classes.container}>
+  //         <h1>Enter Admin Password</h1>
+  //         <form onSubmit={handleAuth}>
+  //           <input
+  //             type="password"
+  //             value={password}
+  //             placeholder="Password"
+  //             onChange={(e) => setPassword(e.target.value)}
+  //           />
+  //           <button type="submit">Enter</button>
+  //         </form>
+  //       </div>
+  //     </Container>
+  //   );
+  // }
 
   return (
     <Container>

@@ -1,15 +1,21 @@
-
-import { neon } from "@neondatabase/serverless";
+import { createClient } from "@supabase/supabase-js";
 
 import GalleryGrid from "@/components/gallery/gallery-grid";
 import classes from "./page.module.css";
 import Container from "@/components/UI/container";
 
-export default async function GalleryPage() {
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
 
-  // Connect to the Neon database
-  const sql = neon(process.env.DATABASE_URL);
-  const imageUrls = await sql`SELECT * FROM "public"."gallery"`;
+export default async function GalleryPage() {
+  const { data: imageUrls, error } = await supabase.from("images").select("*");
+
+  if (error) {
+    console.error("Error fetching images:", error.message);
+    return null;
+  }
 
   return (
     <main>
