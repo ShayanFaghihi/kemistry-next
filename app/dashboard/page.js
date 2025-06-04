@@ -47,24 +47,24 @@ export default function AdminPage() {
     setLoading(false);
   }
 
-  // if (!authorized) {
-  //   return (
-  //     <Container>
-  //       <div className={classes.container}>
-  //         <h1>Enter Admin Password</h1>
-  //         <form onSubmit={handleAuth}>
-  //           <input
-  //             type="password"
-  //             value={password}
-  //             placeholder="Password"
-  //             onChange={(e) => setPassword(e.target.value)}
-  //           />
-  //           <button type="submit">Enter</button>
-  //         </form>
-  //       </div>
-  //     </Container>
-  //   );
-  // }
+  if (!authorized) {
+    return (
+      <Container>
+        <div className={classes.container}>
+          <h1>Enter Admin Password</h1>
+          <form onSubmit={handleAuth}>
+            <input
+              type="password"
+              value={password}
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">Enter</button>
+          </form>
+        </div>
+      </Container>
+    );
+  }
 
   return (
     <Container>
