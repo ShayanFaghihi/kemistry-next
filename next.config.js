@@ -12,7 +12,7 @@ module.exports = {
       },
       {
         protocol: "https",
-        hostname: "zsri2pqd6j5mhipe.public.blob.vercel-storage.com",
+        hostname: "chhaswtfxyoeliqpcmkg.supabase.co",
         port: "",
         pathname: "/**",
       },
