@@ -10,6 +10,12 @@ module.exports = {
         port: "",
         pathname: "/attachments/**",
       },
+      {
+        protocol: "https",
+        hostname: "chhaswtfxyoeliqpcmkg.supabase.co",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   async rewrites() {
@@ -19,5 +25,8 @@ module.exports = {
         destination: "/sitemap.xml",
       },
     ];
+  },
+  experimental: {
+    serverActions: true,
   },
 };

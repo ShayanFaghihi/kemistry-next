@@ -13,8 +13,11 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@neondatabase/serverless": "^1.0.0",
+    "@supabase/supabase-js": "^2.49.10",
     "@vercel/analytics": "^1.5.0",
     "@vercel/blob": "^1.0.0",
+    "@vercel/kv": "^3.0.0",
     "@vercel/speed-insights": "^1.2.0",
     "next": "^15.3.1",
     "react": "^19",
@@ -24,13 +27,11 @@
     "resend": "^4.4.0",
     "sharp": "^0.34.1",
     "slick-carousel": "^1.8.1",
+    "uuid": "^11.1.0",
     "yet-another-react-lightbox": "^3.23.0"
   },
   "devDependencies": {
     "eslint": "^9",
     "eslint-config-next": "15.3.1"
-  },
-  "engines": {
-    "node": "22.x"
   }
 }
