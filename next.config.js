@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
 
 module.exports = {
   images: {
@@ -25,8 +24,5 @@ module.exports = {
         destination: "/sitemap.xml",
       },
     ];
-  },
-  experimental: {
-    serverActions: true,
   },
 };
